@@ -1,6 +1,6 @@
--- CREATE TABLE STUDENT 
+-- Create table student 
 
-CREATE TABLE STUDENT (
+CREATE TABLE student (
     NIC VARCHAR(20) PRIMARY KEY,
     Reg_no VARCHAR(20) NOT NULL UNIQUE,
     First_name VARCHAR(50) NOT NULL,
@@ -14,7 +14,7 @@ CREATE TABLE STUDENT (
 );
 
 
--- Inserting 10 Active Students for 2022
+-- Inserting 10 Active Students
 INSERT INTO STUDENT (NIC, Reg_no, First_name, Last_name, States, Dep_ID, Course_code, Attendance, Marks_ID, Medical_ID) VALUES
 ('200212345701', 'TG/2022/001', 'Kamal', 'Perera', 'Active', 1, 'ICT101', 85, NULL, NULL),
 ('200112345702', 'TG/2022/002', 'Nimali', 'Silva', 'Active', 1, 'ICT102', 90, NULL, NULL),
@@ -27,7 +27,7 @@ INSERT INTO STUDENT (NIC, Reg_no, First_name, Last_name, States, Dep_ID, Course_
 ('199412345709', 'TG/2022/009', 'Sanjeewa', 'Perera', 'Active', 1, 'ICT109', 72, NULL, NULL),
 ('199312345710', 'TG/2022/010', 'Kasuni', 'Jayasinghe', 'Active', 1, 'ICT110', 91, NULL, NULL);
 
--- Inserting 5 Repeat Students for 2020 and 2021
+-- Inserting 5 Repeat Students
 INSERT INTO STUDENT (NIC, Reg_no, First_name, Last_name, States, Dep_ID, Course_code, Attendance, Marks_ID, Medical_ID) VALUES
 ('199812345711', 'TG/2020/001', 'Sunil', 'Weerasinghe', 'Repeat', 1, 'ICT101', 60, NULL, NULL),
 ('199912345712', 'TG/2020/002', 'Anusha', 'Ratnayake', 'Repeat', 1, 'ICT102', 50, NULL, NULL),
