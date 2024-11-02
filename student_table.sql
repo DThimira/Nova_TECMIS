@@ -11,7 +11,6 @@ CREATE TABLE student (
     Dob DATE,
 	PRIMARY KEY (Reg_no)
 );
-
 -- Inserting Students
 
 INSERT INTO student(Reg_no, First_name, Last_name, States, Department, Address, Email, Dob) VALUES
