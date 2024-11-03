@@ -8,7 +8,6 @@ CREATE TABLE lecture_contact (
 
 
 
-
 INSERT INTO lecture_contact (Lecture_id, Contact_number) VALUES
 ('L001', '+94771234567'),
 ('L001', '+94712345678'),
@@ -18,7 +17,7 @@ INSERT INTO lecture_contact (Lecture_id, Contact_number) VALUES
 ('L005', '+94771234568'),
 ('L006', '+94781234568'),
 ('L007', '+94791234568'),
+('L007', '+94791230568'),
 ('L008', '+94761234569'),
 ('L009', '+94771234569'),
-('L010', '+94781234569'),
-('L011', '+94761234570');
+('L010', '+94781234569');
