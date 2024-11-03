@@ -5,7 +5,6 @@ CREATE TABLE tec_officer (
     Gender VARCHAR(10),
     email VARCHAR(100),
     Address VARCHAR(200)
-    
 );
 
 INSERT INTO tec_officer (Tech_id, F_name, L_name, Gender, email, Address) 
