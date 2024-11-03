@@ -1,10 +1,11 @@
 CREATE TABLE tec_officer_contact (
     Tech_id INT,
     Contact_number VARCHAR(15),
-    FOREIGN KEY (Tech_id) REFERENCES tec_officer(Tech_id) 
-        ON DELETE CASCADE 
+    FOREIGN KEY (Tech_id) REFERENCES tec_officer(Tech_id)
+        ON DELETE CASCADE
         ON UPDATE CASCADE
-    );
+);
+
 
 
 
