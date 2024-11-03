@@ -1,7 +1,7 @@
 
 
-CREATE TABLE ATTENDENCE (
-    Attendence_id VARCHAR(20),
+CREATE TABLE ATTENDANCE (
+    Attendance_id VARCHAR(20),
     Date DATE,
     Status VARCHAR(20),
     theory BOOLEAN,
@@ -10,7 +10,7 @@ CREATE TABLE ATTENDENCE (
     Tech_id INT,
     Medical_id VARCHAR(20),
     Reg_no VARCHAR(20),
-    PRIMARY KEY (Attendence_id,Course_code,Date,Reg_no),
+    PRIMARY KEY (Attendance_id,Course_code,Date,Reg_no),
     FOREIGN KEY (Course_code) REFERENCES COURSE (Course_code)
         ON DELETE CASCADE 
         ON UPDATE CASCADE,
@@ -25,7 +25,7 @@ CREATE TABLE ATTENDENCE (
 
 
 
-INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
+INSERT INTO ATTENDANCE (Attendance_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
 ('A001', '2024-08-12', 'Present', TRUE, TRUE, 'ICT1233', '100', NULL, 'TG/2022/001'),
 ('A002', '2024-08-13', 'Present', TRUE, FALSE, 'ICT1212', '101', NULL, 'TG/2022/001'),
 ('A003', '2024-08-13', 'Present', FALSE, TRUE, 'ICT1222', '102', NULL, 'TG/2022/001'),
@@ -155,7 +155,7 @@ INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_c
 
 
 
-INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
+INSERT INTO ATTENDANCE (Attendance_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
 ('A105', '2024-08-12', 'Present', TRUE, TRUE, 'ICT1233', '100', NULL, 'TG/2022/002'),
 ('A106', '2024-08-13', 'Present', TRUE, FALSE, 'ICT1212', '101', NULL, 'TG/2022/002'),
 ('A107', '2024-08-13', 'Present', FALSE, TRUE, 'ICT1222', '102', NULL, 'TG/2022/002'),
@@ -286,7 +286,7 @@ INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_c
 
 
 
-INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
+INSERT INTO ATTENDANCE (Attendance_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
 ('A209', '2024-08-12', 'Present', TRUE, TRUE, 'ICT1233', '100', NULL, 'TG/2022/003'),
 ('A210', '2024-08-13', 'Present', TRUE, FALSE, 'ICT1212', '101', NULL, 'TG/2022/003'),
 ('A211', '2024-08-13', 'Present', FALSE, TRUE, 'ICT1222', '102', NULL, 'TG/2022/003'),
@@ -412,13 +412,12 @@ INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_c
 ('A311', '2024-11-08', 'Present', TRUE, FALSE, 'ENG1212', '100', NULL, 'TG/2022/003'),
 ('A312', '2024-11-08', 'Present', TRUE, FALSE, 'TCS1222', '101', NULL, 'TG/2022/003');
 
-INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
-('A311', '2024-11-08', 'Present', TRUE, FALSE, 'ENG1212', '100', NULL, 'TG/2022/003'),
-('A312', '2024-11-08', 'Present', TRUE, FALSE, 'TCS1222', '101', NULL, 'TG/2022/003');
 
 
 
-INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
+
+
+INSERT INTO ATTENDANCE (Attendance_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
 ('A313', '2024-08-12', 'Present', TRUE, TRUE, 'ICT1233', '100', NULL, 'TG/2022/004'),
 ('A314', '2024-08-13', 'Present', TRUE, FALSE, 'ICT1212', '101', NULL, 'TG/2022/004'),
 ('A315', '2024-08-13', 'Present', FALSE, TRUE, 'ICT1222', '102', NULL, 'TG/2022/004'),
@@ -547,7 +546,7 @@ INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_c
 
 
 
-INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
+INSERT INTO ATTENDANCE (Attendance_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
 ('A415', '2024-08-12', 'Present', TRUE, TRUE, 'ICT1233', '100', NULL, 'TG/2022/005'),
 ('A416', '2024-08-13', 'Present', TRUE, FALSE, 'ICT1212', '101', NULL, 'TG/2022/005'),
 ('A417', '2024-08-13', 'Present', FALSE, TRUE, 'ICT1222', '102', NULL, 'TG/2022/005'),
@@ -679,7 +678,7 @@ INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_c
 
 
 
-INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
+INSERT INTO ATTENDANCE (Attendance_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
 ('A519', '2024-08-12', 'Present', TRUE, TRUE, 'ICT1233', '100', NULL, 'TG/2022/006'),
 ('A520', '2024-08-13', 'Present', TRUE, FALSE, 'ICT1212', '101', NULL, 'TG/2022/006'),
 ('A521', '2024-08-13', 'Present', FALSE, TRUE, 'ICT1222', '102', NULL, 'TG/2022/006'),
@@ -806,7 +805,7 @@ INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_c
 
 
 
-INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
+INSERT INTO ATTENDANCE (Attendance_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
 ('A623', '2024-08-12', 'Present', TRUE, TRUE, 'ICT1233', '100', NULL, 'TG/2022/007'),
 ('A624', '2024-08-13', 'Present', TRUE, FALSE, 'ICT1212', '101', NULL, 'TG/2022/007'),
 ('A625', '2024-08-13', 'Present', FALSE, TRUE, 'ICT1222', '102', NULL, 'TG/2022/007'),
@@ -928,7 +927,7 @@ INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_c
 
 
 
-INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
+INSERT INTO ATTENDANCE (Attendance_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
 ('A727', '2024-08-12', 'Present', TRUE, TRUE, 'ICT1233', '100', NULL, 'TG/2022/008'),
 ('A728', '2024-08-13', 'Present', TRUE, FALSE, 'ICT1212', '101', NULL, 'TG/2022/008'),
 ('A729', '2024-08-13', 'Present', FALSE, TRUE, 'ICT1222', '102', NULL, 'TG/2022/008'),
@@ -1050,7 +1049,7 @@ INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_c
 
 
 
-INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
+INSERT INTO ATTENDANCE (Attendance_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
 ('A831', '2024-08-12', 'Present', TRUE, TRUE, 'ICT1233', '100', NULL, 'TG/2022/009'),
 ('A832', '2024-08-13', 'Present', TRUE, FALSE, 'ICT1212', '101', NULL, 'TG/2022/009'),
 ('A833', '2024-08-13', 'Present', FALSE, TRUE, 'ICT1222', '102', NULL, 'TG/2022/009'),
@@ -1171,7 +1170,7 @@ INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_c
 
 
 
-INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
+INSERT INTO ATTENDANCE (Attendance_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
 ('A935', '2024-08-12', 'Present', TRUE, TRUE, 'ICT1233', '100', NULL, 'TG/2022/010'),
 ('A936', '2024-08-13', 'Present', TRUE, FALSE, 'ICT1212', '101', NULL, 'TG/2022/010'),
 ('A937', '2024-08-13', 'Present', FALSE, TRUE, 'ICT1222', '102', NULL, 'TG/2022/010'),
@@ -1289,7 +1288,7 @@ INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_c
 
 
 
-INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
+INSERT INTO ATTENDANCE (Attendance_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
 ('A1037', '2024-08-12', 'Present', TRUE, TRUE, 'ICT1233', '100', NULL, 'TG/2020/001'),
 ('A1038', '2024-08-13', 'Present', TRUE, FALSE, 'ICT1212', '101', NULL, 'TG/2020/001'),
 ('A1039', '2024-08-13', 'Present', FALSE, TRUE, 'ICT1222', '102', NULL, 'TG/2020/001'),
@@ -1420,7 +1419,7 @@ INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_c
 
 
 
-INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
+INSERT INTO ATTENDANCE (Attendance_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
 ('A1141', '2024-08-12', 'Present', TRUE, TRUE, 'ICT1233', '104', NULL, 'TG/2020/002'),
 ('A1142', '2024-08-13', 'Present', TRUE, FALSE, 'ICT1212', '105', NULL, 'TG/2020/002'),
 ('A1143', '2024-08-13', 'Present', FALSE, TRUE, 'ICT1222', '100', NULL, 'TG/2020/002'),
@@ -1551,7 +1550,7 @@ INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_c
 
 
 
-INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
+INSERT INTO ATTENDANCE (Attendance_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
 ('A1245', '2024-08-12', 'Present', TRUE, TRUE, 'ICT1233', '104', NULL, 'TG/2021/001'),
 ('A1246', '2024-08-13', 'Present', TRUE, FALSE, 'ICT1212', '105', NULL, 'TG/2021/001'),
 ('A1247', '2024-08-13', 'Present', FALSE, TRUE, 'ICT1222', '100', NULL, 'TG/2021/001'),
@@ -1680,7 +1679,7 @@ INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_c
 
 
 
-INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
+INSERT INTO ATTENDANCE (Attendance_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
 ('A1349', '2024-08-12', 'Present', TRUE, TRUE, 'ICT1233', '104', NULL, 'TG/2021/002'),
 ('A1350', '2024-08-13', 'Present', TRUE, FALSE, 'ICT1212', '105', NULL, 'TG/2021/002'),
 ('A1351', '2024-08-13', 'Present', FALSE, TRUE, 'ICT1222', '100', NULL, 'TG/2021/002'),
@@ -1808,7 +1807,7 @@ INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_c
 
 
 
-INSERT INTO ATTENDENCE (Attendence_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
+INSERT INTO ATTENDANCE (Attendance_id, Date, Status, theory, practical, Course_code, Tech_id, Medical_id, Reg_no) VALUES
 ('A1453', '2024-08-12', 'Present', TRUE, TRUE, 'ICT1233', '104', NULL, 'TG/2021/003'),
 ('A1454', '2024-08-13', 'Present', TRUE, FALSE, 'ICT1212', '105', NULL, 'TG/2021/003'),
 ('A1455', '2024-08-13', 'Present', FALSE, TRUE, 'ICT1222', '100', NULL, 'TG/2021/003'),
