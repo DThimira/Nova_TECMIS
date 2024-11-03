@@ -20,3 +20,6 @@ VALUES
     ('ICT1233', 'Server-Side Web Development', 3, 30, TRUE, TRUE, 'ICT', 'L001'),
     ('ENG1212', 'English', 3, 30, TRUE, FALSE, 'MS', 'L006'),
     ('TCS1222', 'Fundamentals Of Management', 3, 30, TRUE, FALSE, 'MS', 'L008');
+
+    ALTER TABLE course
+ADD FOREIGN KEY (Lecturer_id) REFERENCES lecture (Lecture_id);
