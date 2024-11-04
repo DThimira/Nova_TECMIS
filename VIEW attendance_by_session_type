@@ -25,23 +25,13 @@ GROUP BY
 
 
 
-To retrieve the output from the attendance_by_session_type view, you can simply use a SELECT statement. This view aggregates attendance data by Reg_no, Course_code, and session_Type, so querying it will display the calculated attendance statistics.
+
 
 
 SELECT * FROM attendance_by_session_type;
 
 
-Explanation of Output
-This query will return the following columns:
 
-Reg_no - The student's registration number.
-Course_code - The code of the course attended.
-session_Type - The type of session (e.g., Theory, Practical, or Both).
-total_sessions - The total number of sessions held for that type.
-attended_sessions - The total sessions the student attended.
-attendance_percentage - The percentage of sessions attended.
-eligibility - Whether the student is eligible based on attendance (Eligible/Not Eligible).
-If you’d like to filter the output further, for example, to see only eligible students or students with a specific registration number, you can add WHERE clauses like this:
 
 
 -- To see only eligible students
@@ -53,5 +43,5 @@ SELECT * FROM attendance_by_session_type WHERE Reg_no = 'TG/2022/001';
 -- To see students with attendance percentage below 80%
 SELECT * FROM attendance_by_session_type WHERE attendance_percentage < 80;
 
-These queries will display the filtered output directly from the view based on the specified conditions.
+
 
