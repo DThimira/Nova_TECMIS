@@ -1,5 +1,3 @@
--- Create table mark
-
 CREATE TABLE mark (
     Mark_ID INT AUTO_INCREMENT PRIMARY KEY,
     Reg_no VARCHAR(20),
@@ -11,10 +9,10 @@ CREATE TABLE mark (
     Mid_theory INT CHECK (Mid_theory >= 0 AND Mid_theory <= 100),
     Mid_Practical INT CHECK (Mid_Practical >= 0 AND Mid_Practical <= 100),
     End_Theory INT CHECK (End_Theory >= 0 AND End_Theory <= 100),
-    End_Practical INT CHECK (End_Practical >= 0 AND End_Practical <= 100)
-);
+    End_Practical INT CHECK (End_Practical >= 0 AND End_Practical <= 100),
+    FOREIGN KEY (Reg_no) REFERENCES student(Reg_no)
 
--- Inserting marks
+);
 
 INSERT INTO mark (Quiz_01, Quiz_02, Quiz_03, Assignment, Mid_theory, Mid_Practical, End_Theory, End_Practical, Course_Code, Reg_no) VALUES
 (72, 78, 81, 85, 75, 0, 86, 0, 'ICT1242', 'TG/2022/001'),
