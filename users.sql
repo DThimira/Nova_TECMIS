@@ -1,35 +1,33 @@
--- Creating the database
 CREATE DATABASE NovaTecmis;
 USE NovaTecmis;
 
--- Admin: All privileges with Grant Option
-CREATE USER 'Admin'@'localhost' IDENTIFIED BY 'A$dM!n_2024@#';
-GRANT ALL PRIVILEGES ON FacultyManagementSystem.* TO 'Admin'@'localhost' WITH GRANT OPTION;
 
--- Dean: All privileges without Grant Option
-CREATE USER 'Dean'@'localhost' IDENTIFIED BY 'D#eAn_2024$!';
-GRANT ALL PRIVILEGES ON FacultyManagementSystem.* TO 'Dean'@'localhost';
+CREATE USER 'Admin'@'localhost' IDENTIFIED BY 'admin1234';
+GRANT ALL PRIVILEGES ON NovaTecmis.* TO 'Admin'@'localhost' WITH GRANT OPTION;
 
--- Lecturer: All privileges without Grant and user creation
-CREATE USER 'Lecturer'@'localhost' IDENTIFIED BY 'L#eC_tURe!_2024';
-GRANT SELECT, INSERT, UPDATE, DELETE ON FacultyManagementSystem.* TO 'Lecturer'@'localhost';
 
--- Create the Attendance table
+CREATE USER 'Dean'@'localhost' IDENTIFIED BY 'dean1234';
+GRANT ALL PRIVILEGES ON NovaTecmis.* TO 'Dean'@'localhost';
 
--- Technical Officer: Read, write, and update permissions for attendance-related tables/views
-CREATE USER 'TechnicalOfficer'@'localhost' IDENTIFIED BY 'T@ChNi_C0FF!2024';
-GRANT SELECT, INSERT, UPDATE ON FacultyManagementSystem.Attendance TO 'TechnicalOfficer'@'localhost';]
 
------CREATE TABLE FinalAttendance 
------CREATE TABLE FinalGrades
--- Student: Read permission for final attendance and final marks/Grades tables/views
-CREATE USER 'Student'@'localhost' IDENTIFIED BY 'Stu#D3nT@2024!';
-GRANT SELECT ON FacultyManagementSystem.FinalAttendance TO 'Student'@'localhost';
-GRANT SELECT ON FacultyManagementSystem.FinalGrades TO 'Student'@'localhost';
+CREATE USER 'Lecturer'@'localhost' IDENTIFIED BY 'lecture1234';
+GRANT SELECT, INSERT, UPDATE, DELETE ON NovaTecmis.* TO 'Lecturer'@'localhost';
 
--- Apply the changes
+
+CREATE USER 'TechnicalOfficer'@'localhost' IDENTIFIED BY 'tech1234';
+GRANT SELECT, INSERT, UPDATE ON NovaTecmis.attendance TO 'TechnicalOfficer'@'localhost';
+
+
+CREATE USER 'Student'@'localhost' IDENTIFIED BY 'stu1234';
+GRANT SELECT ON NovaTecmis.attendance_summary TO 'Student'@'localhost';
+GRANT SELECT ON NovaTecmis.Student_Grades TO 'Student'@'localhost';
+
+
 FLUSH PRIVILEGES;
 
+
+
+---------------------------------------
 Passwords
 A$dM!n_2024@# for Admin
 D#eAn_2024$! for Dean
