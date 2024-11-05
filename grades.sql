@@ -5,7 +5,8 @@ SELECT
     final.Final_CA_Marks_40,
     final.End_Score_100 ,
     final.Final_Mark,
-    
+
+
     CASE 
         WHEN s.state = 'suspend' THEN 'WH' 
         WHEN final.End_Score_100 IS NULL THEN 'Invalid' 
