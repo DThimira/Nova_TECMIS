@@ -1,39 +1,33 @@
-CREATE VIEW Student_SGPA AS
-SELECT 
-    fd.Reg_no,
-    AVG(
-        CASE 
-            WHEN s.Status = 'Repeat' THEN 
-                CASE 
-                    WHEN fd.Final_Mark >= 55 THEN 2.0 
-                    WHEN fd.Final_Mark >= 50 THEN 1.7
-                    WHEN fd.Final_Mark >= 45 THEN 1.0
-                    ELSE 0.0
-                END
-            ELSE 
-                CASE 
-                    WHEN fd.Final_Mark >= 85 THEN 4.0   -- A+
-                    WHEN fd.Final_Mark >= 80 THEN 3.7   -- A
-                    WHEN fd.Final_Mark >= 75 THEN 3.3   -- A-
-                    WHEN fd.Final_Mark >= 70 THEN 3.0   -- B+
-                    WHEN fd.Final_Mark >= 65 THEN 2.7   -- B
-                    WHEN fd.Final_Mark >= 60 THEN 2.3   -- B-
-                    WHEN fd.Final_Mark >= 55 THEN 2.0   -- C+
-                    WHEN fd.Final_Mark >= 50 THEN 1.7   -- C
-                    WHEN fd.Final_Mark >= 45 THEN 1.3   -- C-
-                    WHEN fd.Final_Mark >= 40 THEN 1.0   -- D+
-                    WHEN fd.Final_Mark >= 35 THEN 0.7   -- D
-                    ELSE 0.0                            -- F
-                END
-        END
-    ) AS SGPA
-FROM 
-    Final_Marks_Details fd
-JOIN 
-    student s ON fd.Reg_no = s.Reg_no 
-GROUP BY 
-    fd.Reg_no;
+CREATE VIEW Semester_GPA AS
+SELECT
+    Grade_Calculation.Reg_no AS student_ID,  
+    sum(grade_points)/sum(credit) AS Semester_GPA
+FROM (
+    SELECT
+        final.Reg_no,
+        c.Course_code,
+        c.Credit,
+        ca.Grade,
 
-
+        CASE
+            WHEN ca.Grade = 'A+' THEN c.Credit * 4.0
+            WHEN ca.Grade = 'A'  THEN c.Credit * 4.0
+            WHEN ca.Grade = 'A-' THEN c.Credit * 3.7
+            WHEN ca.Grade = 'B+' THEN c.Credit * 3.3
+            WHEN ca.Grade = 'B'  THEN c.Credit * 3.0
+            WHEN ca.Grade = 'B-' THEN c.Credit * 2.7
+            WHEN ca.Grade = 'C+' THEN c.Credit * 2.3
+            WHEN ca.Grade = 'C'  THEN c.Credit * 2.0
+            WHEN ca.Grade = 'C-' THEN c.Credit * 1.7
+            WHEN ca.Grade = 'D+' THEN c.Credit * 1.3
+            WHEN ca.Grade = 'D'  THEN c.Credit * 1.0
+            WHEN ca.Grade = 'F'  THEN 0
+            ELSE 0
+        END AS Grade_Points
+    FROM Final_Marks_Details final
+    JOIN course c ON final.Course_Code = c.Course_code
+    JOIN Final_Grade ca ON final.Reg_no = ca.student_ID AND final.Course_Code = ca.course_ID
+) AS Grade_Calculation
+GROUP BY Grade_Calculation.Reg_no;  
 
 
