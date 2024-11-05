@@ -8,6 +8,7 @@ SELECT
 
 
 
+
     CASE 
         WHEN s.state = 'suspend' THEN 'WH' 
         WHEN final.End_Score_100 IS NULL THEN 'Invalid' 
