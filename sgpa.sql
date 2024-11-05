@@ -37,12 +37,3 @@ GROUP BY
 
 
 
-
---Querying the Student_SGPA
-SELECT * 
-FROM Student_SGPA;
-
-
-SELECT * 
-FROM Student_SGPA
-WHERE Reg_no = 'TG/2022/001';
