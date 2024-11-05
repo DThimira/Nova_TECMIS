@@ -11,11 +11,3 @@ GROUP BY
 
 
 
---Querying the Student_CGPA
-SELECT * 
-FROM Student_CGPA;
-
-
-SELECT * 
-FROM Student_CGPA
-WHERE Reg_no = 'TG/2022/001';
