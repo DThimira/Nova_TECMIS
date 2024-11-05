@@ -34,3 +34,5 @@ JOIN student s ON final.Reg_no  = s.Reg_no
 LEFT JOIN END_Exam_M ee ON final.Reg_no  = ee.Reg_no  AND final.Course_Code = ee.Course_Code
 LEFT JOIN CA_Exam_M ca ON final.Reg_no = ca.Reg_no  AND final.Course_Code = ca.Course_Code 
 LEFT JOIN medical m ON ca.Medical_ID = m.Medical_ID; 
+
+--fsdfh
