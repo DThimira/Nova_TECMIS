@@ -26,7 +26,7 @@ FROM (
         END AS Grade_Points
     FROM Final_Marks_Details final
     JOIN course c ON final.Course_Code = c.Course_code
-    JOIN Final_Grade ca ON final.Reg_no = ca.student_ID AND final.Course_Code = ca.course_ID
+    JOIN student_Grades ca ON final.Reg_no = ca.Reg_no AND final.Course_Code = ca.course_code
 ) AS Grade_Calculation
 GROUP BY Grade_Calculation.Reg_no;  
 
