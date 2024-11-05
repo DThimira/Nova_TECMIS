@@ -15,22 +15,20 @@ GROUP BY
     reg_no, course_code;
 
 
-To get the output of the attendance_summary view in MySQL, you can use a SELECT query to retrieve the data from the view. Here’s how you can do it:
+
 
 
 SELECT * FROM attendance_summary;
 
 
-This will display all columns from the attendance_summary view, including reg_no, course_code, total_sessions, attended_sessions, attendance_percentage, and eligibility.
 
-If you want to filter results (e.g., by a specific reg_no or course_code), you can add a WHERE clause like this:
-
+one student
 
 
 SELECT * FROM attendance_summary
 WHERE reg_no = 'TG/2022/001';
 
-Or, to view results for a specific course:
+one course:
 
 
 
@@ -38,4 +36,4 @@ SELECT * FROM attendance_summary
 WHERE course_code = 'ICT1233';
 
 
-This will give you tailored output based on the criteria specified in the WHERE clause.
+
