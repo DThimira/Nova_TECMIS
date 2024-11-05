@@ -2,8 +2,6 @@
 
 
 
-
-
 CREATE VIEW attendance_individual AS
 SELECT
     reg_no,
