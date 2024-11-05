@@ -2,7 +2,7 @@ DELIMITER //
 
 CREATE PROCEDURE Get_CA_Marks_Details(
     IN input_course_code VARCHAR(10),
-    IN input_reg_no VARCHAR(30),  -- Adjust the size as needed
+    IN input_reg_no VARCHAR(30),
     IN view_type VARCHAR(20)
 )
 BEGIN
